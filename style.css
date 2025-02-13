@@ -1,0 +1,164 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lightgreen;
+    padding: 10px;
+    text-align: center;
+    
+}
+.carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow:scroll;
+}
+
+
+/* aqui va el detalle y precio de los productos
+esto va a servir para que el boton y la descripcion
+no interfieran con el carrusel y solo aparezcan 
+cuando el cursor se pase por encima de la imagen*/
+
+
+.producto {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.producto-imagen {
+    width: 200px;
+    height: 200px;
+    
+}
+
+.producto-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.producto:hover .producto-info {
+    display: block;
+}
+.logo img{
+    width: 100%; height: 50%; 
+}
+
+nav ul {
+    list-style-type: lower-greek;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: rgb(164, 175, 12);
+    color: #333;
+}
+
+section {
+    padding: 50px;
+}
+section img{
+    width: 300px; height: 200px;
+}
+img{
+    margin: auto;
+    cursor: pointer;
+    
+}
+section h4{
+    text-align: left;
+
+}
+#horario {
+    background-color: lightgreen;
+}
+.nombre{
+    color: darkblue;
+}
+
+
+#productos{
+background-color: darkseagreen;
+}
+footer {
+    background-color:rgb(144, 238, 144);
+    color: #07000a;
+    text-align: center;
+    padding: 10px;
+}
+button {
+    color: #320b64;
+    box-shadow: #8124a8;
+
+}
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+     }}
+    
+     #mora {
+        display: flex;
+        margin-bottom: 10px;
+        width: 1000px;
+        height: 200px;
+     }
+     #mora img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        filter: brightness(80%);
+        transition: .7s ease;
+     }
+     #mora img:hover{
+        cursor:all-scroll;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(130%);
+     }
+     #carrusel {
+        display: flex;
+      }
+      
+      #carrusel-imagen {
+        position: relative;
+        margin: 10px;
+      }
+      .product-details {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(50, 140, 192, 0.7);
+        color: rgb(28, 59, 199);
+        padding: 5px;
+        border-radius: 5px;
+        display: none; /* Oculto inicialmente */
+      }
+      
+      .carrusel-item:hover .product-details {
+        display: block; /* Se muestra cuando el ratón pasa por encima */
+      }
+      
